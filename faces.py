@@ -1,10 +1,11 @@
-mydict = {58,41,58,40}
-
 def main():
-    happy = input("Tell me something. I will judge you!").translate(mydict)
-    moral(happy)
+    emoticon = input("Tell me an emoticon and I'll convert it to emoji pls!")
+    emoticon = emoji(emoticon)
 
-def moral(face):
-    print("I think, {face}")
+def emoji(emoticon):
+    emoticon = emoticon.replace(":)", "🙂")
+    emoticon = emoticon.replace(":(", "🙁")
+    print(f"Here is ur emoji: {emoticon}")
+    return emoticon
 
 main()
